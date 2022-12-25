@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+
+body{
+    background:  hsl(36, 100%, 99%);
+    padding: 3rem;
+    width: 100%;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid blue; */
+}
+
+nav h1{
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+nav ul{
+    display: flex;
+    /* justify-content: space-around; */
+    gap: 2rem;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    
+    font-weight: 700;
+}
+
+nav ul li a:hover{
+    border-bottom: 0.1rem solid black;
+    transform: scale(1.5);    
+    /* transform is no working  */
+    transition: 1s;
+    color: hsl(35, 77%, 62%);
+}
+
+.toggle{
+    width: 100%;
+    padding: 10px 20px;
+    background: rebeccapurple;
+    text-align: right;
+    color: #fff;
+    display: none;
+    /* height: 2rem; */
+    font-size: 30px;
+}
+
+/* .toggle i{
+    
+    font-size: 30px;
+} */
+
+
+.main{
+    display: flex;
+    /* border: 2px solid red; */
+    gap: 0.5rem;
+}
+ 
+.box1{
+    /* border: 2px solid blue; */
+    min-width: 70%;
+    /* padding: 0.5rem; */
+    
+
+} 
+
+.box1 img{
+    width: 100%;
+}
+
+.box1Content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box1Content .box1ContentRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.box1Content .box1ContentRight button{
+    width: 30%;
+    padding: 0.3rem;
+    border: none;
+    background-color: hsl(35, 77%, 62%);
+    border-radius: 0.3rem;
+    color: white;
+    font-weight: 600;
+    padding-top: 0.3rem;
+   min-height: 3rem;
+    max-height: max-content;
+
+}
+.box1Content .box1ContentRight button:hover{
+    background: white;
+    border: 0.2rem solid hsl(35, 77%, 62%);
+    color: black;
+}
+
+.box1Right{
+    background: hsl(240, 100%, 5%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 0.3rem;
+}
+
+.box1Right h1{
+    color: hsl(35, 77%, 62%);
+}
+
+.box1Right div{
+    border-bottom: 0.1rem solid hsl(233, 8%, 79%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.box1Right #last{
+    border: none;
+}
+
+.box1Right div p{
+    font-weight: 70;
+}
+
+ 
+.bottom{
+    margin-top: 2rem;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem;
+}
+
+.bottom .side p{
+    font-weight: 80;
+}
+
+@media all and (max-width : 840px){
+
+    /*  what is the diffrence between background and background-color ,,, and visibility:hidden and display : none*/
+    nav ul{
+        /* visibility: hidden; */
+        display: none;
+        /* border: 2px solid red; */
+    }
+
+    .main{
+        flex-direction: column;
+    }
+    .toggle{
+        display: contents;
+        /* position: absolute; */
+        /* float: right; */
+        /* left :60%; */
+        /* border: 2px solid red; */
+    }
+    .toggle button{
+        width: 1.5rem;
+        /* background: hsl(35, 77%, 62%); */
+        border: none;
+        height: 20px;
+
+    }
+
+    .toggle button:hover{
+        background: hsl(240, 100%, 5%);
+        /* transition: 2s; */
+    }
+
+}
