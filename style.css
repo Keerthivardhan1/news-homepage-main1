@@ -1,24 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
 
+/*
+
+KEERTHI VARDHAN
+
+nav {
+
+   1. h1 
+   2. ul{
+
+        1 . toggle
+        2 .  nav items (....)
+    
+    }
+}
+
+main{
+
+    goes till the questions ( .... is VC Funding drying up)
+
+
+}
+
+....
+*/
+
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins' , sans-serif;
 }
-
 body{
     background:  hsl(36, 100%, 99%);
     padding: 3rem;
     width: 100%;
 
 }
-
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 2px solid blue; */
 }
 
 nav h1{
@@ -28,7 +51,6 @@ nav h1{
 
 nav ul{
     display: flex;
-    /* justify-content: space-around; */
     gap: 2rem;
 }
 
@@ -38,15 +60,13 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
-    color: black;
-    
+    color: black;        /*How to set opacity without effecting the font or text color weight .....*/  
     font-weight: 700;
 }
 
 nav ul li a:hover{
     border-bottom: 0.1rem solid black;
     transform: scale(1.5);    
-    /* transform is no working  */
     transition: 1s;
     color: hsl(35, 77%, 62%);
 }
@@ -61,44 +81,27 @@ nav ul li a:hover{
     /* height: 2rem; */
     font-size: 30px;
 }
-
-/* .toggle i{
-    
-    font-size: 30px;
-} */
-
-
 .main{
     display: flex;
-    /* border: 2px solid red; */
     gap: 0.5rem;
 }
- 
 .box1{
-    /* border: 2px solid blue; */
     min-width: 70%;
-    /* padding: 0.5rem; */
-    
-
 } 
-
 .box1 img{
     width: 100%;
 }
-
 .box1Content{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .box1Content .box1ContentRight{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 0.5rem;
 }
-
 .box1Content .box1ContentRight button{
     width: 30%;
     padding: 0.3rem;
@@ -117,7 +120,6 @@ nav ul li a:hover{
     border: 0.2rem solid hsl(35, 77%, 62%);
     color: black;
 }
-
 .box1Right{
     background: hsl(240, 100%, 5%);
     color: white;
@@ -126,69 +128,103 @@ nav ul li a:hover{
     justify-content: space-around;
     padding-left: 0.3rem;
 }
-
 .box1Right h1{
     color: hsl(35, 77%, 62%);
 }
-
 .box1Right div{
     border-bottom: 0.1rem solid hsl(233, 8%, 79%);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
-
 .box1Right #last{
     border: none;
 }
-
 .box1Right div p{
     font-weight: 70;
 }
-
- 
 .bottom{
     margin-top: 2rem;
-    /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
     padding: 0.3rem;
 }
-
 .bottom .side p{
     font-weight: 80;
+}
+#togglebtn{
+    display: none;
+}
+.menuitems{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+   font-size: 1.4rem;
+   font-weight: 400;
+}
+
+#readbtn{
+    transition: all 0.3s;
 }
 
 @media all and (max-width : 840px){
 
     /*  what is the diffrence between background and background-color ,,, and visibility:hidden and display : none*/
-    nav ul{
-        /* visibility: hidden; */
-        display: none;
+    .menu{
+        display: flex;
+        flex-wrap: wrap;
         /* border: 2px solid red; */
     }
-
+    .menuitems{
+        display: none;
+    }
+    nav ul{
+        transition: all 0.3s;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 1.8rem;
+        padding: 1rem;
+    }
+    .menuitems{
+        display: none;
+        margin-top: 3rem;
+        color: black;
+    }
+    #togglebtn{
+        display: block;
+        width: fit-content;
+        border: none;
+        background-color: white;
+        position: absolute;
+        margin: 1.8rem;
+        right: 0;
+        background-image: url(icon-menu.svg);
+        width: 2rem;
+        height: 2rem;
+        background-repeat: no-repeat;
+        transition: all 0.3s;
+        transition-timing-function: ease-in-out;   
+    }
+    .box1Content h1{
+        margin-right: 1rem;
+    }
+    .item{
+        margin-top: 2rem;
+    }
     .main{
         flex-direction: column;
     }
-    .toggle{
-        display: contents;
-        /* position: absolute; */
-        /* float: right; */
-        /* left :60%; */
-        /* border: 2px solid red; */
-    }
     .toggle button{
         width: 1.5rem;
-        /* background: hsl(35, 77%, 62%); */
         border: none;
         height: 20px;
-
     }
-
-    .toggle button:hover{
-        background: hsl(240, 100%, 5%);
-        /* transition: 2s; */
+    #readbtn{
+        width: 7rem;
+        letter-spacing: 0.1rem;
+        transition: all 0.3s;
     }
 
 }
