@@ -169,34 +169,57 @@ nav ul li a:hover{
 
 @media all and (max-width : 840px){
 
+    body{
+        overflow-x: hidden;
+    }
+ 
+
     /*  what is the diffrence between background and background-color ,,, and visibility:hidden and display : none*/
     .menu{
         display: flex;
         flex-wrap: wrap;
+        transition: all 0.4s;
+
         /* border: 2px solid red; */
     }
     .menuitems{
         display: none;
+    }
+    .menuitems:hover{
+        /* border: 2px solid red; */
+        transition: all 0.3s;
     }
     nav ul{
         transition: all 0.3s;
         display: flex;
         flex-direction: column;
         position: absolute;
+        top: 0;
         right: 0;
-        top: 1.8rem;
+        /* top: 1.8rem; */
         padding: 1rem;
+        position: fixed;
+        height: 100vh;
+        /* border: 2px solid red; */
+        margin-top: 0;
+        backdrop-filter: blur(2rem);
+        /* background-color: hsl(40, 50%, 100%,9); */
+        /* border: 2px solid red; */
+        transition: all 0.4s;
+       
     }
     .menuitems{
         display: none;
         margin-top: 3rem;
         color: black;
+        transition: all 0.4s;
+        /* transform: translateX(100%); */
     }
     #togglebtn{
         display: block;
         width: fit-content;
         border: none;
-        background-color: white;
+        background-color: transparent;
         position: absolute;
         margin: 1.8rem;
         right: 0;
@@ -205,7 +228,10 @@ nav ul li a:hover{
         height: 2rem;
         background-repeat: no-repeat;
         transition: all 0.3s;
-        transition-timing-function: ease-in-out;   
+        transition-timing-function: ease-in-out;  
+        margin-top: 3rem;
+
+
     }
     .box1Content h1{
         margin-right: 1rem;
